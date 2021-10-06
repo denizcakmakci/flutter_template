@@ -9,8 +9,6 @@ import '../../../../core/init/extensions/context/duration_extension.dart';
 import '../../../../core/init/extensions/context/responsive_extension.dart';
 import '../../../../core/init/extensions/context/theme_extension.dart';
 import '../../../../core/init/extensions/string/locale_text_extensions.dart';
-import '../../../enums/device_type.dart';
-import '../../../helper/utils.dart';
 import 'platform_dialog.dart';
 
 class CustomDialog extends PlatformSensitiveWidget {
@@ -61,12 +59,9 @@ class CustomDialog extends PlatformSensitiveWidget {
   Widget buildAndroidWidget(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final isWeb = Utils.instance.getDeviceType(context, constraints) ==
-            DeviceType.web;
         return AlertDialog(
           shape: RoundedRectangleBorder(
-              borderRadius:
-                  BorderRadius.circular(context.width * (isWeb ? 3 : 5))),
+              borderRadius: BorderRadius.circular(context.width * 5)),
           elevation: 0,
           //backgroundColor: context.canvasColor,
           title: title ?? Container(),
@@ -81,9 +76,6 @@ class CustomDialog extends PlatformSensitiveWidget {
   Widget buildIOSWidget(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        // ignore: unused_local_variable
-        final isWeb = Utils.instance.getDeviceType(context, constraints) ==
-            DeviceType.web;
         return CupertinoAlertDialog(
           title: title ?? Container(),
           content: content,
@@ -97,12 +89,9 @@ class CustomDialog extends PlatformSensitiveWidget {
   Widget buildMainWidget(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final isWeb = Utils.instance.getDeviceType(context, constraints) ==
-            DeviceType.web;
         return AlertDialog(
           shape: RoundedRectangleBorder(
-              borderRadius:
-                  BorderRadius.circular(context.width * (isWeb ? 3 : 5))),
+              borderRadius: BorderRadius.circular(context.width * 5)),
           elevation: 0,
           //backgroundColor: context.canvasColor,
           title: title ?? Container(),

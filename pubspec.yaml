@@ -29,15 +29,16 @@ dependencies:
     sdk: flutter
   flutter_mobx: ^2.0.2
   mobx: ^2.0.4
+  provider: ^5.0.0
   shared_preferences: ^2.0.7
 
 dev_dependencies:
+  build_runner: ^2.1.1
   device_preview: ^0.7.4
   flutter_lints: ^1.0.4
-  mobx_codegen: ^2.0.2
-  build_runner: ^2.1.1
   flutter_test:
     sdk: flutter
+  mobx_codegen: ^2.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -51,9 +52,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/language/
-    - assets/images/
-    - assets/icons/
-    - assets/logo/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

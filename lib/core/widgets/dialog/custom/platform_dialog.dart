@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/material.dart';
 
 abstract class PlatformSensitiveWidget extends StatelessWidget {
   const PlatformSensitiveWidget({Key? key}) : super(key: key);

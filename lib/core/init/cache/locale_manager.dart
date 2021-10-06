@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../product/enums/local_manager_keys.dart';
+import '../../enums/local_manager_keys.dart';
 
 class LocaleManager {
   static final LocaleManager _instance = LocaleManager._init();
