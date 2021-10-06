@@ -27,7 +27,7 @@ void main() async {
     child: MultiProvider(
       providers: [...ApplicationProvider.instance!.dependItems],
       child: DevicePreview(
-        enabled: !kReleaseMode,
+        enabled: false, //!kReleaseMode,
         builder: (context) => _MyApp(
           themeProvider: themeProvider,
         ),
@@ -51,7 +51,6 @@ class _MyApp extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        home: const Scaffold(),
         onGenerateRoute: NavigationRoute.instance.generateRoute,
         navigatorKey: NavigationService.instance.navigatorKey,
       ),
